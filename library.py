@@ -1,8 +1,6 @@
-import numpy as np
-
-import sympy as sym 
-
-import matplotlib.pyplot as plt
+#import numpy as np
+#import sympy as sym 
+#import matplotlib.pyplot as plt
 
 
 
