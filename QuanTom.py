@@ -16,5 +16,3 @@ def calculate_wave_speed(wavelength, frequency):
     """ 
     return wavelength * frequency
 
-git config --global user.name "TomMcGarel"
-git config --global user.email "tommcgarel@gmail.com"
