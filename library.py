@@ -13,71 +13,24 @@ def calculate_wave_speed(wavelength:float, frequency:float) -> float:
     return wavelength * frequency
 
 
-
-
-#    def do_calculate_photon_energy(frequency:float=0, time:float=0, wavelength:float=0) -> float:
-#        error = 0
-#        planks_constant: float = 6.626e-34
-#        speed_of_light = 3e8
-#        #validation
-#        #check inputs
-#        if frequency!=0 and time!=0 and wavelength!=0:
-#            error = 1
-#            result = 0
-#            return error,result
-#        if frequency!=0 and time!=0:
-#            error = 2
-#            result = 0
-#            return error,result
-#        if time!=0 and wavelength!=0:
-#            error = 3
-#            result = 0
-#            return error,result
-#        if frequency!=0 and wavelength!=0:
-#            error = 4
-#            result = 0
-#            return error,result
-#
-#        if time == 0 and wavelength == 0:
-#            result = (planks_constant * frequency)
-#        elif frequency == 0 and wavelength == 0:
-#            result = (planks_constant / time)
-#        elif time == 0 and frequency == 0:
-#            result = ((planks_constant * speed_of_light) / wavelength)
-#        return error, result
-
-
-
 def calculate_photon_energy(frequency:float=None, time:float=None, wavelength:float=None) -> float:
+    planks_constant: float = 6.626e-34
+    speed_of_light = 3e8
        
     def do_calculate_photon_energy_by_wavelength(wavelength):
-        planks_constant: float = 6.626e-34
-        speed_of_light = 3e8
-        return ((planks_constant * speed_of_light) / wavelength)        
+        if wavelength == 0:
+            return None
+        else:
+            return ((planks_constant * speed_of_light) / wavelength)        
 
     def do_calculate_photon_energy_by_time(time):
-        planks_constant: float = 6.626e-34
-        return (planks_constant / time)
+        if time == 0:
+            return None
+        else:
+            return (planks_constant / time)
 
     def do_calculate_photon_energy_by_frequency(frequency):
-        planks_constant: float = 6.626e-34
         return (planks_constant * frequency)        
-
-    # run validation - check inputs
-    #if frequency!=0 and time!=0 and wavelength!=0:        
-    #    return None
-    #if frequency!=0 and time!=0:        
-    #    return None
-    #if time!=0 and wavelength!=0:
-    #    return None
-    #if frequency!=0 and wavelength!=0:    
-    #    return None
-    #
-    #only 1 unit defined
-    #if frequency>0: return do_calculate_photon_energy_by_frequency(frequency)
-    #elif time>0: return do_calculate_photon_energy_by_time(time)
-    #elif wavelength>0: return do_calculate_photon_energy_by_wavelength(wavelength)
-
 
     if frequency==None and time==None and wavelength==None:        
         return None
@@ -108,3 +61,16 @@ def calculate_photon_energy(frequency:float=None, time:float=None, wavelength:fl
     When inputting the parameters, only input the parameter you are using.
     """
 
+"""
+print('test 1', calculate_photon_energy(frequency=0, time=0, wavelength=0))
+print('test 2', calculate_photon_energy(frequency=1, time=2, wavelength=3))
+print('test 3', calculate_photon_energy(time=1, wavelength=1))
+print('test 4', calculate_photon_energy(frequency=1, wavelength=1))
+print('test 5', calculate_photon_energy(frequency=1, time=1))
+print('calculate_photon_energy by frequency = ',calculate_photon_energy(frequency=2))
+print('calculate_photon_energy by time = ',calculate_photon_energy(time=2))
+print('calculate_photon_energy by wavelength = ',calculate_photon_energy(wavelength=2))
+print('calculate_photon_energy by frequency = ',calculate_photon_energy(frequency=0))
+print('calculate_photon_energy by time = ',calculate_photon_energy(time=0))
+print('calculate_photon_energy by wavelength = ',calculate_photon_energy(wavelength=0))
+"""
