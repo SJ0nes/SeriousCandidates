@@ -48,7 +48,7 @@ def calculate_wave_speed(wavelength:float, frequency:float) -> float:
 
 
 
-def calculate_photon_energy(frequency:float=0, time:float=0, wavelength:float=0) -> float:
+def calculate_photon_energy(frequency:float=None, time:float=None, wavelength:float=None) -> float:
        
     def do_calculate_photon_energy_by_wavelength(wavelength):
         planks_constant: float = 6.626e-34
@@ -79,16 +79,16 @@ def calculate_photon_energy(frequency:float=0, time:float=0, wavelength:float=0)
     #elif wavelength>0: return do_calculate_photon_energy_by_wavelength(wavelength)
 
 
-    if frequency==0 and time==0 and wavelength==0:        
+    if frequency==None and time==None and wavelength==None:        
         return None
-    if frequency!=0 and time!=0 and wavelength!=0:        
+    if frequency!=None and time!=None and wavelength!=None:        
         return None
     
-    if frequency==0 and time==0:        
+    if frequency==None and time==None:        
         return do_calculate_photon_energy_by_wavelength(wavelength)
-    elif time==0 and wavelength==0:
+    elif time==None and wavelength==None:
         return do_calculate_photon_energy_by_frequency(frequency)
-    elif frequency==0 and wavelength==0:    
+    elif frequency==None and wavelength==None:    
         return do_calculate_photon_energy_by_time(time)
     else:
         return None
@@ -108,13 +108,3 @@ def calculate_photon_energy(frequency:float=0, time:float=0, wavelength:float=0)
     When inputting the parameters, only input the parameter you are using.
     """
 
-
-    
-
-print("frequency", calculate_photon_energy(frequency=2))
-print("wavelength", calculate_photon_energy(wavelength=2))
-print("time", calculate_photon_energy(time=2))
-print("time", calculate_photon_energy(time=0))
-print("no values", calculate_photon_energy())
-print("2 values", calculate_photon_energy(time=2, wavelength=2))
-print("2 values", calculate_photon_energy(frequency=2, wavelength=2))
