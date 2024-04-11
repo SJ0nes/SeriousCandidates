@@ -4,40 +4,56 @@
 
 
 
-def calculate_wave_speed(wavelength:float, frequency:float) -> float:
+def calculate_wave_speed(wavelength:float = None, frequency:float = None, time:float = None) -> float: # wavespeed = wavelength * frequency
+    
+    def do_calculate_wave_speed_by_frequency(frequency):
+        return wavelength * frequency
+    def do_calculate_wave_speed_by_time(time):
+        if time == 0:
+            return None 
+        else:
+            return wavelength / time
+        
+    if wavelength != None and frequency == None:
+        return do_calculate_wave_speed_by_time
+    elif wavelength != None and time == None:
+        return do_calculate_wave_speed_by_frequency
+    else:
+        return None
     """
     Wavespeed is the distance travelled by a wave per unit time.
     The equation returns the speed of a wave in metres per second.
     It takes wavelength (in metres) and frequency (in hertz) as inputs.
     """ 
-    return wavelength * frequency
 
 
-def calculate_photon_energy(frequency:float=None, time:float=None, wavelength:float=None) -> float:
+
+def calculate_photon_energy(frequency:float=None, time:float=None, wavelength:float=None) -> float: # telling the code that the result will be a float
     planks_constant: float = 6.626e-34
     speed_of_light = 3e8
        
-    def do_calculate_photon_energy_by_wavelength(wavelength):
-        if wavelength == 0:
-            return None
+    def do_calculate_photon_energy_by_wavelength(wavelength): # E = h * c / wavelength since f = c / wavelength
+        if wavelength == 0: # preventing division by 0
+            return None #none is the null value
         else:
             return ((planks_constant * speed_of_light) / wavelength)        
 
-    def do_calculate_photon_energy_by_time(time):
-        if time == 0:
+    def do_calculate_photon_energy_by_time(time): # E = h/t since f = 1/t
+        if time == 0: #preventing division by 0
             return None
         else:
             return (planks_constant / time)
 
-    def do_calculate_photon_energy_by_frequency(frequency):
-        return (planks_constant * frequency)        
+    def do_calculate_photon_energy_by_frequency(frequency): # E = h * f
+        return (planks_constant * frequency) #multiplication by 0 is okay   
 
-    if frequency==None and time==None and wavelength==None:        
+# ensuring only 1 is inputted
+    if frequency==None and time==None and wavelength==None: 
         return None
     if frequency!=None and time!=None and wavelength!=None:        
         return None
     
-    if frequency==None and time==None:        
+    if frequency==None and time==None:  
         return do_calculate_photon_energy_by_wavelength(wavelength)
     elif time==None and wavelength==None:
         return do_calculate_photon_energy_by_frequency(frequency)
@@ -48,19 +64,40 @@ def calculate_photon_energy(frequency:float=None, time:float=None, wavelength:fl
     
 
 
+def calculate_photoelectric_effect(workfunction:float, kinetic_energy:float) -> float: # E = hf = workfunction + kinetic energy
+    return (workfunction + kinetic_energy)
 
-    
-    
-    """
-    Photon energy is the energy carried by a single photo. 
-    The equation returns the energy of a photon in Electron Volts.
-    It takes either frequency or time as inputs and multiplies with a planks_constant which is a constant value.
-    
-    Since frequency is equal to the inverse of time, 2 equations can be used to find photon energy.
-    Frequency also is equal to the speed of light divided with wavelength.
-    When inputting the parameters, only input the parameter you are using.
-    """
 
+
+def calculate_kinetic_energy(velocity:float) -> float: # eV = 1/2 * m * v ** 2
+    mass:float = 9.11e-31 # mass of electron is constant
+    return (mass * (velocity ** 2 )/ 2)
+
+
+
+def calculate_de_broglie(momentum:float = None, velocity:float = None, ) -> float: # 2 different formulas for calculating wavelength
+    planks_constant: float = 6.626e-34
+    mass:float = 9.11e-31 # mass of electron is constant
+    def do_calculate_de_broglie_by_momentum(momentum): # wavelength = planks constant / momentum
+        if momentum == 0:
+            return None # preventing division by 0
+        else:
+            return (planks_constant / momentum)
+        
+    def do_calculate_de_broglie_by_velocity(velocity): # wavelength = planks constant / (mass * velocity)
+        if velocity == 0: # preventing division by 0
+            return None
+        else:
+            return (planks_constant / (mass * velocity))
+    
+    if momentum == None and velocity != None: # case where using velocity
+        return do_calculate_de_broglie_by_velocity
+    elif momentum != None and velocity == None: # case where using momentum
+        return do_calculate_de_broglie_by_momentum
+    else: # ensuring no errors can occur
+        return None
+    
+# Tests for calculate photon energy
 """
 print('test 1', calculate_photon_energy(frequency=0, time=0, wavelength=0))
 print('test 2', calculate_photon_energy(frequency=1, time=2, wavelength=3))
