@@ -7,40 +7,40 @@ planks_constant: float = 6.626e-34
 mass:float = 9.11e-31
 
 def do_calculate_wave_speed_by_frequency(frequency): 
-        return wavelength * frequency
+    return wavelength * frequency
 
 def do_calculate_wave_speed_by_time(time):
-        if time == 0: #since dividing by time, ensuring there isn't any errors
-            return None 
-        else:
-            return wavelength / time
+    if time == 0: #since dividing by time, ensuring there isn't any errors
+        return None 
+    else:
+        return wavelength / time
 
 def do_calculate_de_broglie_by_momentum(momentum):
-        if momentum == 0:
-            return None # preventing division by 0
-        else:
-            return (planks_constant / momentum)
+    if momentum == 0:
+        return None # preventing division by 0
+    else:
+        return (planks_constant / momentum)
         
 def do_calculate_de_broglie_by_velocity(velocity): 
-        if velocity == 0: # preventing division by 0
-            return None
-        else:
-            return (planks_constant / (mass * velocity))
+    if velocity == 0: # preventing division by 0
+        return None
+    else:
+        return (planks_constant / (mass * velocity))
 
 def do_calculate_photon_energy_by_time(time):
-        if time == 0: #preventing division by 0
-            return None
-        else:
-            return (planks_constant / time)
+    if time == 0: #preventing division by 0
+        return None
+    else:
+        return (planks_constant / time)
         
 def do_calculate_photon_energy_by_frequency(frequency): 
         return (planks_constant * frequency) 
 
 def do_calculate_photon_energy_by_wavelength(wavelength): 
-	if wavelength == 0: # preventing division by 0
-            return None #none is the null value
-        else:
-            return ((planks_constant * speed_of_light) / wavelength)     
+    if wavelength == 0: # preventing division by 0
+        return None #none is the null value
+    else:
+        return ((planks_constant * speed_of_light) / wavelength)     
         
 
 #the functions used in practice while using the library
