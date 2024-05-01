@@ -26,7 +26,7 @@ As mentioned before in the tutorial, the QuanTum function does all the work for 
 
 The equation for Kinetic Energy: 
 
-$KE$ = $\frac{1}{2}$$m$$v^2$
+$KE$ = $\frac{1}{2}mv^2$
 
 With $m$ = Mass (kg), and $v$ = Velocity (m/s)
 
@@ -105,7 +105,7 @@ Where $E$ = Photon Energy, $h$ = Plancks Constant and $f$ = frequency
 
 From the wave of new ideas surrounding light, the wave-particle duality theory was born. Louis de Broglie suggested that all matter could display wave-like properties. He proposed that if electrons and other particles travel through space as a wave, they have an associated wavelength. The predicted wavelength is found by equating the work done to accelerate the electrons with the kinetic energy transferred to the electrons. Substituting:
 
-$KE$ = $\frac{1}{2}$$m$$v^2$
+$KE$ = $\frac{1}{2}mv^2$
 
 we get:
 
