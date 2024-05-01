@@ -71,7 +71,6 @@ def calculate_photoelectric_effect(workfunction:float, kinetic_energy:float) -> 
     return (workfunction + kinetic_energy)
 
 def calculate_kinetic_energy(velocity:float) -> float:
-    mass:float = 9.11e-31 
     return (mass * (velocity ** 2 )/ 2)
 
 def calculate_de_broglie(momentum:float = None, velocity:float = None, ) -> float: # 2 different formulas for calculating wavelength
