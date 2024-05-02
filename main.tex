@@ -1,45 +1,51 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
+\usepackage{graphicx} 
 
-\title{Modelling Magic with Python: Ertai}
-\author{Vince Knight}
-\date{2021-04-16}
+\title{Modelling Basic Quantum Mechanics Equations with Python:  }
+\author{Samuel Jones, ...}
+\date{April 2024}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-This paper introduces Ertai: a python library that allows for the mathematical modelling of a popular Collectible Card Game (CCG): Magic the Gathering (MtG). As well as describing the high level functionality of this library, a specific use case will be given that allows for the calculation of a ‘Mana Curve’ which is of strategic interest to players of MtG.
+This paper introduces QuanTom : a python library that helps solve A-level physics questions regarding Quantum Mechanics(QM). Within this document, we will explain how our library resolves these types of questions and describe the advanced capability of our library.
 \end{abstract}
 
 \section{Introduction}
-Magic the Gathering (MtG) is a Collectible Card Game (CCG) first released in 1993 and is arguably the first and most popular CCG. The game has a number of strategic elements of gameplay:
-\begin{enumerate}
-    \item Card selection: from one's collection deciding which cards to use to form a deck.
-    \item In play strategy: during the play against an opponent, the large number of card combinations allow for many strategic possibilities.
-    \item Card trading: by design cards have varying value and are often the subject of trades.
-\end{enumerate}
-The ertai library aims to allow for the simulation of certain aspects of game play as applied to the first of these: how to select cards in a specific way. At its core MtG has a dynamic of casting spells (playing cards) which requires a player to spend “Mana”. This resource can be of various types, that correspond to the colours of Magic in MtG: black, white, blue, red or green. 
+Quantum mechanics emerged in the early 20th century when scientists attempted to understand the behaviour of lights and electrons. This then developed into theories of wave duality and the photoelectric effect etc. (QM) helps us understand the behaviour of particles like electrons and photons. This concept is used in many practical fields for example: within technology such as transistors, lasers and LEDs; within medicine for MRI and PET scans
 
+This library includes formulas from [2]
+\begin{itemize}
+    \item Wavespeed Equation
+    \item Photon Energy Equation
+    \item Photoelectric effect Equation
+    \item Kinetic Energy Equation
+    \item De Broglie wave Equation
+\end{itemize}
+One of the main formulas used in QM is Kinetic Energy, we can use QuanTom to help solve these types of questions [1]. For example, if we were given the speed of the electron, we can then use our library to work out the KE of the particle (let's assume the velocity of the particle is 20$m/s$)
 \begin{verbatim}
-import ertai
-mana_cost = ertai.Mana("Blue", "Red", "Red")
-mana_pool = ertai.Mana("Blue", "Blue", "Blue", "Red", "Red", "Black")
-mana_cost <= mana_pool
-True
-mana_pool - mana_cost
-2 Blue Mana, 1 Black Mana
+    >>> import Quantom
+    >>> KE = Quantom.calculate_kinetic_energy(velocity=20)
+    >>> KE
+    1.822e-28
 \end{verbatim}
 
-\section{Statement of need}
-This type of analysis is not novel, for example a number of other libraries that can be used to simulate plays of the game are described, for example: Magarena, which is an open source library built in Java. The ertai library is the first Python library (to the authors knowledge) which allows it to be readily used in conjunction with other scientific tools. Furthermore one particular goal of ertai is to be specifically translatable to mathematical models of MtG.
+\section{Statement of Need}
+The QuanTom library aims to save time and aid understanding to A-level students within their Physics module as well as introduce coding to their everyday lives. Our library should be used in conjunction with other tools used within physics. For example; students should make sure that their units are all the same as the Python code. To our knowledge this the first library that integrates A-level quantum mechanics into code.
 
 \section{Conclusion}
-This paper has given a description of ertai: a library with a goal of allowing for the mathematical modelling of MtG. The current capabilities of the library are limited but as it is written in Python, the object oriented nature of the library can be used to make the library extendable to other aspects of MtG. Every ability of a Magic card can be added as a method on the ertai.Card class.
+This project has given a description and insight into QuanTom: a library which helps students solve Quantum Mechanics (QM) questions
+The library is well-documented and has been tested. 
+\begin{itemize}
+    \item python -m pip Quantom
+    \item The source code is available at github...
+\end{itemize}
 
-\bibliographystyle{plain}
-\bibliography{references}
-
+\section{References}
+\begin{enumerate}
+    \item [1] Topic 4. 5: Quantum physics (no date) OCR A Physics A-level, Physicsandmathstutor.com. Available at: https://pmt.physicsandmathstutor.com/download/Physics/A-level/Notes/OCR-A/4-Electrons-Waves-Photons/Detailed/4.5.%20Quantum%20Physics.pdf (Accessed: April 27, 2024).
+    \item [2] Quantum (no date) A Level Physics. Available at: https://www.alevelphysicsonline.com/quantum (Accessed: April 28, 2024).
+\end{enumerate}
 \end{document}
