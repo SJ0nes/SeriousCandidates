@@ -32,7 +32,7 @@ With $m$ = Mass (kg), and $v$ = Velocity (m/s)
 
 As we are working with Quantum Mechanics, this equation is usually applied to the kinetic energy of an electron which has a fixed mass:
 
-$9.11$ x $10^{-31}$$kg$
+$9.11$ x $10^{-31}kg$
 
 If you en electron was travelling at a velocity of $3000 m/s$ , using the QuanTum function it would be easy to work out the electron's Kinetic Energy ($KE$):
 
