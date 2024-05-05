@@ -1,13 +1,13 @@
 # QuanTom
 
-Functionality for solving Quantum Mechanic equations.
+Functionality for solving quantum mechanic equations.
 
 
 ## Tutorial
 
-In this tutorial we will see how to use 'QuanTum' to solve simple Quantum equations. These equations can be used to calculate wave speed, photon energy, De Broglie wavelength and kinetic energy. For some background information <insert wiki link >
+In this tutorial we will see how to use 'QuanTom' to solve simple quantum equations. These equations can be used to calculate wave speed, photon energy, De Broglie wavelength and kinetic energy. For some background information <insert wiki link >
 
-The process in which 'QuanTum' is used is very simple. For example, if someone wanted to calculate the wave speed of a moving particle in Quantum Mechanics, and they knew the frequency and wavelength of said particle, they would merely have to import our library:
+The process in which 'QuanTom' is used is very simple. For example, if someone wanted to calculate the wave speed of a moving particle in quantum mechanics, and they knew the frequency and wavelength of said particle, they would merely have to import our library:
 
 ```python
 import QuanTom 
@@ -22,7 +22,7 @@ Simply putting in the values for X and Y will return the calculated wave speed. 
 
 ### How to calculate Kinetic Energy
 
-As mentioned before in the tutorial, the QuanTum function does all the work for you all we need to do is simply plug in values. We've seen the basics of how it works for wave speed but now let's see a proper example of how to effectively use QuanTum.
+As mentioned before in the tutorial, the QuanTom function does all the work for you all we need to do is simply plug in values. We've seen the basics of how it works for wave speed but now let's see a proper example of how to effectively use QuanTom.
 
 The equation for Kinetic Energy: 
 
@@ -30,11 +30,11 @@ $KE$ = $\frac{1}{2}mv^2$
 
 With $m$ = Mass (kg), and $v$ = Velocity (m/s)
 
-As we are working with Quantum Mechanics, this equation is usually applied to the kinetic energy of an electron which has a fixed mass:
+As we are working with quantum mechanics, this equation is usually applied to the kinetic energy of an electron which has a fixed mass:
 
 $9.11$ x $10^{-31}kg$
 
-If you en electron was travelling at a velocity of $3000 m/s$ , using the QuanTum function it would be easy to work out the electron's Kinetic Energy ($KE$):
+If you en electron was travelling at a velocity of $3000 m/s$ , using the QuanTom function it would be easy to work out the electron's Kinetic Energy ($KE$):
 
 
 ```python
@@ -50,10 +50,10 @@ This gives:
 ```
 ### How to calculate the energy of a photon 
 
-Just like the Kinetic Energy of an electron, using the QuanTum fucnction for Photon energy noly requires substituting in values, although unlike Kinetic Energy there isn't only one equation involved.
+Just like the Kinetic Energy of an electron, using the QuanTom fucnction for Photon energy noly requires substituting in values, although unlike Kinetic Energy there isn't only one equation involved.
 
 
-The three equations QuanTum uses for Photon energy are:
+The three equations QuanTom uses for Photon energy are:
 
 $PE = \frac{hc}{\lambda}$  
 
@@ -67,8 +67,8 @@ $PE = \frac{h}{t}$
 
 Where $h$ = Plancks Constant and $t$ = time (s)
 
-All 3 equations can be solved by QuanTum in the same way as before. For an example, we will use the equation involving Plancks Constant, Speed of light and Wavelength.
-The speed of light and Plancks Constant are both fixed values that have already been inputted into the QuanTum fucntion.
+All 3 equations can be solved by QuanTom in the same way as before. For an example, we will use the equation involving Plancks Constant, Speed of light and Wavelength.
+The speed of light and Plancks Constant are both fixed values that have already been inputted into the QuanTom fucntion.
 
 If a photon were to have a wavelength of $5$ metres:
 
@@ -87,9 +87,9 @@ This gives:
 
 ## Explanation
 
-### Brief overview of Quantum Mechanics
+### Brief overview of quantum mechanics
 
-Quantum Mechanics describes the behaviour of particles at the smallest scales, referring to atoms and subatomic particles. It introduces the idea that electrons and photons can possibly exist in multiple states simultaneously. Quantum Mechanics is the foundation for all areas of Qunatum Physics which branches out into so many fields. Our function 'Quantum' focuses on the 'Wave-particle duality' and solving equations within this sector of Quantum Mechanics.
+Quantum mechanics describes the behaviour of particles at the smallest scales, referring to atoms and subatomic particles. It introduces the idea that electrons and photons can possibly exist in multiple states simultaneously. Quantum mechanics is the foundation for all areas of quantum Physics which branches out into so many fields. Our function 'QuanTom' focuses on the 'Wave-particle duality' and solving equations within this sector of quantum mechanics.
 
 ### Photons 
 
@@ -141,9 +141,13 @@ The following fucntions are written in QuanTom:
 
 ### Bibliography
 
-The wikipedia page on Quantum Mechanics gives a good overview of the subject: <insert link>
+The wikipedia page on quantum mechanics gives a good overview of the subject: <insert link>
 
-The following text is a recommended reference on Quantum Mechanics:
+The following text is a recommended reference on quantum mechanics:
 
 >Piccirillo, L. (2023). Introduction to the Maths and Physics of Quantum Mechanics. CRC Press.
+
+The following textbook is a recommeneded referene on quantum physics:
+
+>O’neill, M. (2015). OCR AS/A level physics A. Student book 1. Pearson.
 ‌
