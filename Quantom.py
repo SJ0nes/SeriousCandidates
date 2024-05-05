@@ -62,10 +62,19 @@ def calculate_photon_energy(frequency:float=None, time:float=None, wavelength:fl
         return None
 
 def calculate_photoelectric_effect(workfunction:float = None, kinetic_energy:float = None) -> float:
-    return (workfunction + kinetic_energy)
+    if workfunction == None:
+        return kinetic_energy
+    elif kinetic_energy == None:
+        return workfunction
+    else:
+        photon_energy = workfunction + kinetic_energy
+        return photon_energy
 
-def calculate_kinetic_energy(velocity:float) -> float:
-    return (mass * (velocity ** 2 )/ 2)
+def calculate_kinetic_energy(velocity:float = None) -> float:
+    if velocity == None:
+        return None
+    else:
+        return (mass * (velocity ** 2 )/ 2)
 
 def calculate_de_broglie(momentum:float = None, velocity:float = None, ) -> float: # 2 different formulas for calculating wavelength
     if momentum == None and velocity != None: # case where using velocity
@@ -74,4 +83,3 @@ def calculate_de_broglie(momentum:float = None, velocity:float = None, ) -> floa
         return do_calculate_de_broglie_by_momentum(momentum)
     else: # ensuring no errors can occur
         return None
-    
