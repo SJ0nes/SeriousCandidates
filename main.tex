@@ -1,30 +1,27 @@
 \documentclass{article}
 \usepackage{graphicx} 
 
-\title{Modelling Basic Quantum Mechanics Equations with Python:  }
-\author{Samuel Jones, ...}
+\title{Modelling Basic Quantum Mechanics Equations with Python: Quantom}
+\author{Aayla Haq, Anoj Rameshprabahar, Samuel Jones, Thomas McGarel}
 \date{April 2024}
+
 
 \begin{document}
 
 \maketitle
 
-\begin{abstract}
-This paper introduces QuanTom : a python library that helps solve A-level physics questions regarding Quantum Mechanics(QM). Within this document, we will explain how our library resolves these types of questions and describe the advanced capability of our library.
-\end{abstract}
+\section{Summary}
+Quantum physics is the branch of physics concerned with how matter and energy interact on the smallest scale. QuanTom is a Python library that provides students across the globe studying quantum physics or mechanics with relevant software to aid their calculations. This paper details the advanced capability of QuanTom and provides information concerning the library.
 
-\section{Introduction}
-Quantum mechanics emerged in the early 20th century when scientists attempted to understand the behaviour of lights and electrons. This then developed into theories of wave duality and the photoelectric effect etc. (QM) helps us understand the behaviour of particles like electrons and photons. This concept is used in many practical fields for example: within technology such as transistors, lasers and LEDs; within medicine for MRI and PET scans
+\section{Introduction to Quantum Physics}
+Quantum physics is one of the most crucial branches of physics. It emerged in the early 20th century when scientists attempted to understand the most unique phenomena in nature by looking at the behaviour of the interaction between matter and energy alongside the activities that occur inside the atom. In the modern day, quantum physics has applications that are essential to everyday life. For example, this field was integral in the development of semiconductor technology that is used in smartphones, computers, and other electronic devices that we rely on daily. Other prominent examples include transistors, lasers, light-emitting diodes, MRI machines and PET scans.
 
-This library includes formulas from [2]
-\begin{itemize}
-    \item Wavespeed Equation
-    \item Photon Energy Equation
-    \item Photoelectric effect Equation
-    \item Kinetic Energy Equation
-    \item De Broglie wave Equation
-\end{itemize}
-One of the main formulas used in QM is Kinetic Energy, we can use QuanTom to help solve these types of questions [1]. For example, if we were given the speed of the electron, we can then use our library to work out the KE of the particle (let's assume the velocity of the particle is 20$m/s$)
+\section{The Software}
+The functions that can be utilised in this library consist of: the wave speed equation, the photon energy equation, the photoelectric equation, the kinetic energy equation and the De Broglie wavelength equation. The library 
+
+To demonstrate the utilisation of a QuanTom functions, kinetic energy can be used. For example, if provided with the velocity of a particle, the library can be used to calculate the kinetic energy of the particle. 
+
+let's assume the velocity of the particle is $20ms^2$
 \begin{verbatim}
     >>> import Quantom
     >>> KE = Quantom.calculate_kinetic_energy(velocity=20)
@@ -33,18 +30,47 @@ One of the main formulas used in QM is Kinetic Energy, we can use QuanTom to hel
 \end{verbatim}
 
 \section{Statement of Need}
-The QuanTom library aims to save time and aid understanding to A-level students within their Physics module as well as introduce coding to their everyday lives. Our library should be used in conjunction with other tools used within physics. For example; students should make sure that their units are all the same as the Python code. To our knowledge this the first library that integrates A-level quantum mechanics into code.
+Quantum physics is a diverse field and covers many fundamental concepts that are taught to students from the beginning of their secondary school education to those who pursue STEM degrees at university. These concepts consist of wave-particle duality, the photoelectric effect, quantum entanglement, quantum superposition, quantum tunnelling and mechanics. 
+
+The QuanTom library covers the fundamental equations necessary in the education of physics systems and aims to aid students with lengthy calculations. In 2021 in the UK alone, 36,698 students took  A-Level Physics, 88,244 took A-Level Mathematics and 14,562 took A-Level Further Maths (1) and all 3 subjects cover equations which are available in the QuanTom library.  The QuanTom library provides a useful tool to students and teachers by providing a quick and efficient method of calculation. The library provides clear answers and reduces the chances of error (compared to typing in the numbers by hand on a calculator). This library will support students’ understanding of quantum calculations and will incorporate the usage of Python into their education. 
+
+Aside from education, the QuanTom library can be used by industry professionals. For example, quantum technology is a newly emerging area of research in many technology industries. QuanTom provides professionals working in fields such as quantum computing, quantum simulation, quantum communications and quantum sensing with an accessible and essential library. 
+
+
+\section{State of the Field}
+QuanTom is a library that doesn't depends on any other libraries and can be easily integrated.
+
+The most mature software available on quantum physics is QuTip (2). QuTip is a library that is “designed for simulating the open quantum dynamics of systems” 2, however, the library is not suitable for students and teachers as the functionality is too advanced for GCSE and A-Level. 
+Another adversary to QuanTom is QEngine3 which is a library for “simulating and controlling ultracold quantum systems”3. QEngine is written in C++ which makes it less relevant to researchers and students as Python is the growing language in research and is the most easily accessible and simple-to-use language. Although all 3 libraries are based on quantum physics, there is no overlapping content between QuanTom and QEngine and QuTip, making it a unique software.
 
 \section{Conclusion}
-This project has given a description and insight into QuanTom: a library which helps students solve Quantum Mechanics (QM) questions
-The library is well-documented and has been tested. 
+QuanTom is designed to be a toolbox for students and teachers working with quantum physics calculations. The software is accessible through the GitHub repository linked below where a thorough tutorial and guide have been written to provide detailed instructions on how the software is to be used.  
+
 \begin{itemize}
     \item The source code is available at github https://github.com/SJ0nes/SeriousCandidates
 \end{itemize}
 
 \section{References}
 \begin{enumerate}
-    \item [1] Topic 4. 5: Quantum physics (no date) OCR A Physics A-level, Physicsandmathstutor.com. Available at: https://pmt.physicsandmathstutor.com/download/Physics/A-level/Notes/OCR-A/4-Electrons-Waves-Photons/Detailed/4.5.%20Quantum%20Physics.pdf (Accessed: April 27, 2024).
-    \item [2] Quantum (no date) A Level Physics. Available at: https://www.alevelphysicsonline.com/quantum (Accessed: April 28, 2024).
+    \item  UK Government . (2022, May 17). “Entries and Results - A level and AS by subject and student characteristics (single academic year)” from “A level and other 16 to 18 results”, Permanent data table. Explore-Education-Statistics.service.gov.uk. https://explore-education-statistics.service.gov.uk/data-tables/permalink/4000ba98-bbe6-4b65-b26c-508c06b578fb.
+    \item J. R. Johansson, P.D. Nation, and F. Nori, “QuTiP 2: A Python framework for the dynamics of open quantum systems”, Comp. Phys. Comm. 184, 1234 (2013). https://qutip.org/ 
+    \item Sørensen, J. J., Jensen, J., Heinzel, T., and Sherson, J. (2018). QEngine: An open-source C++ Library for Quantum Optimal Control of Ultracold Atoms [C++ library]. https://arxiv.org/abs/1807.11731
+
 \end{enumerate}
+
+\begin{small}
+The following text is a recommended reference on quantum mechanics:
+\begin{verbatim}
+>Piccirillo, L. (2023). Introduction to the Maths and Physics of Quantum Mechanics. CRC Press.    
+\end{verbatim}
+
+
+The following textbook is a recommended reference on quantum physics:
+\begin{verbatim}
+>O’neill, M. (2015). OCR AS/A level physics A. Student book 1. Pearson.    
+\end{verbatim}
+\end{small}
+
+
+
 \end{document}
