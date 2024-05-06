@@ -141,8 +141,6 @@ The following fucntions are written in QuanTom:
 
 ### Bibliography
 
-The wikipedia page on quantum mechanics gives a good overview of the subject: <insert link>
-
 The following text is a recommended reference on quantum mechanics:
 
 >Piccirillo, L. (2023). Introduction to the Maths and Physics of Quantum Mechanics. CRC Press.
