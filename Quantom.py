@@ -52,7 +52,7 @@ def calculate_wave_speed(wavelength:float = None, frequency:float = None, time:f
         return None
     
 """
-The function returns the wave speed for the electromagnetic wave in metres per second.
+The function returns the wave speed for an electromagnetic wave in metres per second.
 
 It takes the inputs as wavelength in meters and divides it by time in seconds, or multiplies it by frequency in hertz.
 
@@ -128,7 +128,7 @@ The de Broglie function returns the wavelength of a particle in meters.
 
 It takes inputs as the mass in kilograms and multiplies it with the velocity in meters per second, and this is divided by plank's constant.
 
-Since momentum is equal to the product of mass (kilograms) and velocity (meters per secoond), wavelength can also be expressed as plank's constant divided by momentum in kilogram meters per second.
+Since momentum is equal to the product of mass (kilograms) and velocity (meters per second), wavelength can also be expressed as plank's constant divided by momentum in kilogram meters per second.
 
 The mass of a electron is a fixed constant value so cannot be inputted. 
 
